@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:toku_app/models/number.dart';
+import 'package:toku_app/models/family_model.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-class ItemNumber extends StatelessWidget {
-  ItemNumber({
-    super.key,
-    required this.number,
+class ItemFamily extends StatelessWidget {
+  const ItemFamily({
+    required this.family,
   });
 
-  final Number_Model number;
+  final Family_Model family;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xffFF9F3C),
+      color: Color.fromARGB(255, 3, 93, 25),
       height: 80,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
+        // mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
-              color: Color(0xffFFF4DC), child: Image.asset('${number.image}')),
+              color: Color.fromARGB(255, 222, 233, 217),
+              child: Image.asset('${family.image}')),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Column(
@@ -27,14 +27,14 @@ class ItemNumber extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  '${number.en}',
+                  '${family.en}',
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: Color(0xffFFF4DC),
                   ),
                 ),
-                Text('${number.ar}',
+                Text('${family.ar}',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
