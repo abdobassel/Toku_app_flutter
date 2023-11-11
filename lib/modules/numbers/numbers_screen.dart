@@ -12,41 +12,29 @@ class Numbers_Screen extends StatelessWidget {
         en: "One",
         image: "assets/images/numbers/number_one.png"),
     Number_Model(
-        ar: "واحـــد",
-        en: "One",
-        image: "assets/images/numbers/number_two.png"),
+        ar: "اثنان", en: "Two", image: "assets/images/numbers/number_two.png"),
     Number_Model(
-        ar: "واحـــد",
-        en: "One",
+        ar: "ثلاثة",
+        en: "Three",
         image: "assets/images/numbers/number_three.png"),
     Number_Model(
-        ar: "واحـــد",
-        en: "One",
+        ar: "اربعة",
+        en: "Four",
         image: "assets/images/numbers/number_four.png"),
     Number_Model(
-        ar: "واحـــد",
-        en: "One",
-        image: "assets/images/numbers/number_five.png"),
+        ar: "خمسة", en: "Five", image: "assets/images/numbers/number_five.png"),
     Number_Model(
-        ar: "واحـــد",
-        en: "One",
-        image: "assets/images/numbers/number_one.png"),
+        ar: "ستة", en: "Six", image: "assets/images/numbers/number_one.png"),
     Number_Model(
-        ar: "واحـــد",
-        en: "One",
-        image: "assets/images/numbers/number_two.png"),
+        ar: "سبعة", en: "Seven", image: "assets/images/numbers/number_two.png"),
     Number_Model(
-        ar: "واحـــد",
-        en: "One",
+        ar: "ثمانية",
+        en: "Eeight",
         image: "assets/images/numbers/number_three.png"),
     Number_Model(
-        ar: "واحـــد",
-        en: "One",
-        image: "assets/images/numbers/number_four.png"),
+        ar: "تسعة", en: "Nine", image: "assets/images/numbers/number_four.png"),
     Number_Model(
-        ar: "واحـــد",
-        en: "One",
-        image: "assets/images/numbers/number_five.png"),
+        ar: "عشرة", en: "Ten", image: "assets/images/numbers/number_five.png"),
   ];
 
   //var
@@ -55,19 +43,12 @@ class Numbers_Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBarToku(title: 'Numbers'),
-        body: Column(
-          children: [
-            ItemNumber(number: numbers[0]),
-            ItemNumber(number: numbers[1]),
-            ItemNumber(number: numbers[2]),
-            ItemNumber(number: numbers[3]),
-            ItemNumber(number: numbers[4]),
-            ItemNumber(number: numbers[5]),
-            ItemNumber(number: numbers[6]),
-            ItemNumber(number: numbers[7]),
-            ItemNumber(number: numbers[8]),
-            ItemNumber(number: numbers[9]),
-          ],
+        body: ListView.builder(
+          scrollDirection: Axis.vertical,
+          itemBuilder: (context, index) {
+            return ItemNumber(number: numbers[index]);
+          },
+          itemCount: numbers.length,
         ));
   }
 }
