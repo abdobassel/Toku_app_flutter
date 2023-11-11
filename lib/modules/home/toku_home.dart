@@ -20,7 +20,7 @@ class TokoHome extends StatelessWidget {
             color: Color(0xffFF9F3C),
             ontap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return Numbers_screen();
+                return Numbers_Screen();
               }));
             },
           ),
@@ -29,7 +29,7 @@ class TokoHome extends StatelessWidget {
               color: Color(0xff5E8A3F),
               ontap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return Numbers_screen();
+                  return Numbers_Screen();
                 }));
               }),
           Category(
@@ -37,7 +37,7 @@ class TokoHome extends StatelessWidget {
               color: Color(0xff864CAF),
               ontap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return Numbers_screen();
+                  return Numbers_Screen();
                 }));
               }),
           Category(
@@ -45,7 +45,7 @@ class TokoHome extends StatelessWidget {
               color: Color(0xff52AFD6),
               ontap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return Numbers_screen();
+                  return Numbers_Screen();
                 }));
               }),
         ],
